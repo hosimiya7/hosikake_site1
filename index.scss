@@ -1,0 +1,154 @@
+$main_color: rgb(49, 166, 212);
+$font-color: #444;
+$sub_color: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    line-height: 2px;
+    letter-spacing: 1.7px;
+    font-family: 'Times New Roman', Times, serif;
+    color: $font-color;
+}
+
+li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+
+.flex-start{
+    display: flex;
+    justify-content: start;
+}
+
+.flex-around{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+header{
+  .header-top{
+    img{
+      margin-left: 0.5em;
+    }
+    h1{
+      margin: 2em 1em;
+    }
+    .header-lists{
+      margin: 1em;
+      li{
+        margin: 1em 0;
+        a{
+        }
+      }
+    }
+  }
+  .header-img {
+   position: relative;
+    .album {
+      margin: 0;
+      background-color: white;
+      position: relative;
+    }
+    .album img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      animation-name: album;
+      -webkit-animation-name: album;
+      animation-duration: 20s;
+      -webkit-animation-duration: 20s;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      opacity: 0;
+    }
+    
+    .album .img1 {
+      animation-delay:0s;
+      -webkit-animation-delay:0s;
+      display: block;
+      margin: 0;
+    }
+    
+    .album .img2 {
+      animation-delay:5s;
+      -webkit-animation-delay:5s;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .album .img3 {
+      animation-delay:10s;
+      -webkit-animation-delay:10s;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .album .img4 {
+      animation-delay:15s;
+      -webkit-animation-delay:15s;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .album .img5 {
+      animation-delay:20s;
+      -webkit-animation-delay:20s;
+      animation-direction: 5s;
+      -webkit-animation-direction: 5s;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    @keyframes album {
+      0% {
+        opacity: 0;
+      }
+      
+      12.5% {
+        opacity: 1;
+      }
+    
+      37.5% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+    
+    @-webkit-keyframes album {
+      0% {
+        opacity: 0;
+      }
+      
+      12.5% {
+        opacity: 1;
+      }
+    
+      37.5% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+    .header-text{
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      p{
+        color: $sub_color;
+        font-weight: bolder;
+        font-size: 4em;
+        padding: 1.5em 0 0 1.2em;
+      }
+    }
+  }
+}

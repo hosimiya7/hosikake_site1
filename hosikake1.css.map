@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;EACtB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,KAAK;CACxB;;AAED,AAAA,MAAM,CAAA;EACF,gBAAgB,EAAE,KAAK;CAC1B",
-    "sources": [
-        "hosikake1.scss"
-    ],
-    "names": [],
-    "file": "hosikake1.css"
-}
