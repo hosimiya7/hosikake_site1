@@ -2,15 +2,31 @@ $main_color: rgb(49, 166, 212);
 $font-color: #444;
 $sub_color: #fff;
 
+$breakpoints: (
+  'sm': 'screen and (max-width: 480px)',
+  'md': 'screen and (max-width: 900px)',
+  'lg': 'screen and (max-width: 1350px)',
+  'xl': 'screen and (min-width: 1350px)',
+
+) !default;
+
+@mixin mq($breakpoint: md){
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
+
+
 *{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    line-height: 2px;
+    line-height: 1.7em;
     letter-spacing: 1.7px;
     font-family: 'Times New Roman', Times, serif;
     color: $font-color;
+    text-align: center;
 }
 
 li{
@@ -37,14 +53,12 @@ header{
       margin-left: 0.5em;
     }
     h1{
-      margin: 2em 1em;
+      margin: 1em 1em;
     }
     .header-lists{
       margin: 1em;
       li{
         margin: 1em 0;
-        a{
-        }
       }
     }
   }
@@ -141,13 +155,13 @@ header{
     }
     .header-text{
       position: absolute;
-      top: 1em;
-      left: 1em;
+      top: 1rem;
+      left: 1rem;
       p{
         color: $sub_color;
         font-weight: bolder;
         font-size: 4em;
-        padding: 1.5em 0 0 1.2em;
+        padding: 1em 0 0 1em;
       }
     }
   }
