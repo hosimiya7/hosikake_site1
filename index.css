@@ -159,4 +159,20 @@ header .header-img .header-text p {
   font-size: 4em;
   padding: 1em 0 0 1em;
 }
+
+main .content-wrapper {
+  margin: 5em;
+}
+
+main .content-wrapper h2 {
+  margin: 2em;
+}
+
+#business-hours-fee .hours {
+  margin: 1em;
+}
+
+#business-hours-fee .fee .fee-table {
+  margin: 1em auto;
+}
 /*# sourceMappingURL=index.css.map */

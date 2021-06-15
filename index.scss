@@ -166,3 +166,21 @@ header{
     }
   }
 }
+main{
+  .content-wrapper{
+    margin: 5em;
+    h2{
+      margin: 2em;
+    }
+  }
+}
+#business-hours-fee{
+  .hours{
+    margin: 1em;
+  }
+  .fee{
+    .fee-table{
+      margin: 1em auto;
+    }
+  }
+}

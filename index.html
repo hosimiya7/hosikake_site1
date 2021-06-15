@@ -57,60 +57,85 @@
         </div>
     </header>
     <main>
-        <div id="business-hours_fee">
+        <div id="business-hours-fee" class="content-wrapper">
             <h2>営業時間・料金</h2>
-            <div class="hours">
-                <h3>営業時間</h3>
-                <p>通常営業</p>         
-                <p>10：00 ～ 17:00(最終16：30)(火曜日休館)</p>
-                <p>ナイトツアー</p>
-                <p>4月～10月</p>
-                <p>19時30分～21時</p>
-                <p>11月～3月</p>
-                <p>18時30分～20時</p>
+            <div class="flex-around">
+                <div class="hours">
+                    <h3>営業時間</h3>
+                    <table class="hour-table">
+                        <tr>
+                            <td></td>
+                            <th>4月から10月</th>
+                            <th>11月から3月</th>
+                        </tr>
+                         <tr>
+                            <td>通常</td>
+                            <td>10：00 ～ 17:00</td>
+                            <td>(最終16：30)(火曜日休館)</td>
+                        </tr>
+                        <tr>
+                            <td>ナイトツアー</td>
+                            <td>19:30から21:00</td>
+                            <td>18:30から20:00</td>
+                        </tr>
+                    </table>
+                    <!-- <p>通常営業</p>         
+                    <p>10：00 ～ 17:00(最終16：30)(火曜日休館)</p>
+                    <p>ナイトツアー</p>
+                    <p>4月～10月</p>
+                    <p>19時30分～21時</p>
+                    <p>11月～3月</p>
+                    <p>18時30分～20時</p> -->
+                </div>
+                <div class="fee">
+                    <h3>料金</h3>
+                    <table class="fee-table">
+                        <tr>
+                            <td></td>
+                            <th>大人</th>
+                            <th>子ども</th>
+                        </tr>
+                         <tr>
+                            <td>通常</td>
+                            <td>2400円</td>
+                            <td>1200円</td>
+                        </tr>
+                        <tr>
+                            <td>ナイトツアー</td>
+                            <td>2000円</td>
+                            <td>1000円</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="fee">
-                <h3>料金</h3>
-                <table>
-                    <tr>
-                        <td></td>
-                        <th>大人</th>
-                        <th>子ども</th>
-                    </tr>
-                     <tr>
-                        <td>通常</td>
-                        <td>2400円</td>
-                        <td>1200円</td>
-                    </tr>
-                    <tr>
-                        <td>ナイトツアー</td>
-                        <td>2000円</td>
-                        <td>1000円</td>
-                    </tr>
-                </table>
+            <div class="sell-text">
                 <p>夏休み期間限定7月1日から8月31日まで小学生はナイトツアー半額500円！！</p>
             </div>
         </div>
-        <div id="event">
+        <div id="event" class="content-wrapper">
             <h2>イベント情報</h2>
             <h3>イルカショー</h3>
+            <img src="img/dolphin-show.jpg" alt="イルカショー" width="40%" height="300px">
             <p>
                 全日　11時～、13時～、15時～　(一階外　イルカプールにて)
             </p>
             <h3>アシカショー</h3>
+            <img src="img/sea-lion.jpg" alt="アシカショー" width="40%" height="300px">
             <p>
                 全日　13時30分～、15時30分～　(二階外　アシカプールにて)
             </p>
             <h3>ペンギン散歩</h3>
+            <img src="img/walking.jpg" alt="ペンギン散歩" width="40%" height="300px">
             <p>
                 全日　12時～、14時～　（一階外フロアにて）（雨天中止）
             </p>
             <h3>お魚のごはんタイム</h3>
+            <img src="img/feeding.jpg" alt="お魚のごはんタイム" width="40%" height="300px">
             <p>
                 全日　12時30分～、16時～　（巨大水槽前）
             </p>
         </div>
-        <div id="guide">
+        <div id="guide" class="content-wrapper">
             <h2>館内案内</h2>
             <p>1F</p>
             <img src="img/infomation.png" alt="一階の館内図">
@@ -129,7 +154,7 @@
             <p></p>
             <p>他にも見どころたくさん！！</p>
         </div>
-        <div id="access">
+        <div id="access" class="content-wrapper">
             <h2>アクセス</h2>
             <p>住所　福井県あわら市星駆XXX番地XXX号</p>
             <p>TEL　 XXX-XXXX-XXX</p>
