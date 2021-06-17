@@ -28,12 +28,67 @@ a {
           justify-content: start;
 }
 
+.flex-start-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+table {
+  border: 1px solid #aaa;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th,
+table th,
+table td {
+  padding: .6em 3em;
+  border-bottom: 1px solid #aaa;
+}
+
+table th {
+  background-color: #eee;
+}
+
+table th + th,
+table td {
+  border-left: 1px solid #aaa;
+}
+
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+
+.border-none {
+  border-left: none;
+}
+
 .flex-around {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.flex-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 header .header-top img {
@@ -169,10 +224,35 @@ main .content-wrapper h2 {
 }
 
 #business-hours-fee .hours {
-  margin: 1em;
+  margin: 0 0 2em 0;
+}
+
+#business-hours-fee .hours .hour-table {
+  margin: 1em auto;
+}
+
+#business-hours-fee .fee {
+  margin: 0 0 2em 0;
 }
 
 #business-hours-fee .fee .fee-table {
   margin: 1em auto;
+}
+
+#events .event {
+  width: calc(50% - 4em);
+  margin: 2em;
+}
+
+#events .event img {
+  border-radius: 40%;
+}
+
+#guide-points .guide-point {
+  width: calc(100%);
+}
+
+#guide-points .guide-point img {
+  width: 30%;
 }
 /*# sourceMappingURL=index.css.map */
