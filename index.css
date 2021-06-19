@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Merienda");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,14 @@
   font-family: 'Times New Roman', Times, serif;
   color: #444;
   text-align: center;
+}
+
+.container {
+  height: 2em;
+}
+
+.box {
+  z-index: 1;
 }
 
 li {
@@ -290,7 +299,11 @@ main .content-wrapper h2 {
   background-color: #102542;
 }
 
-#guide .guide-points .guide-point-1 h4, #guide .guide-points .guide-point-1 p {
+#guide .guide-points .guide-point-1 .guide-point-text1 {
+  margin: auto;
+}
+
+#guide .guide-points .guide-point-1 .guide-point-text1 h4, #guide .guide-points .guide-point-1 .guide-point-text1 p {
   color: #dee5e5;
 }
 
@@ -298,8 +311,24 @@ main .content-wrapper h2 {
   background-color: #dee5e5;
 }
 
+#guide .guide-points .guide-point-2 .guide-point-text2 {
+  margin: auto;
+}
+
 #guide .guide-points .guide-point-3 img {
   width: calc(100%/3);
   height: 350px;
+}
+
+#guide .guide-points .guide-point-3 .guide-point-3-text {
+  background-color: #dee5e5;
+}
+
+#guide .guide-points .guide-point-3 .guide-point-3-text .guide-padding {
+  padding-bottom: 1em;
+}
+
+footer .footer-wrapper {
+  background-color: #0bd;
 }
 /*# sourceMappingURL=index.css.map */

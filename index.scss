@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 $main_color: #3c91e6;
 $font_color1: #444;
 $font_color2: #fff;
@@ -32,6 +34,22 @@ $breakpoints: (
     font-family: 'Times New Roman', Times, serif;
     color: $font_color1;
     text-align: center;
+}
+
+// raindrop
+
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+.container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  height: 2em;
+}
+.box {
+  // padding: 20px;
+  // text-align: center;
+  z-index:1;
 }
 
 li{
@@ -284,20 +302,35 @@ main{
     }
     .guide-point-1{
       background-color: $sub_color4;
-      h4, p{
-        color: $sub_color1;
+      .guide-point-text1{
+        margin: auto;
+        h4, p{
+          color: $sub_color1;
+        }
       }
     }
     .guide-point-2{
       background-color: $sub_color1;
+      .guide-point-text2{
+        margin: auto;
+      }
     }
     .guide-point-3{
       img{
         width: calc(100%/3);
         height: 350px;
       }
-
+      .guide-point-3-text{
+        background-color: $sub_color1;
+        .guide-padding{
+          padding-bottom: 1em;
+        }
+      }
     }
   }
-
+}
+footer{
+  .footer-wrapper{
+    background-color: #0bd;
+  }
 }
