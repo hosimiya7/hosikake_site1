@@ -36,21 +36,18 @@ $breakpoints: (
     text-align: center;
 }
 
+
 // raindrop
 
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
 .container {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   height: 2em;
 }
 .box {
-  // padding: 20px;
-  // text-align: center;
   z-index:1;
 }
+
 
 li{
     list-style: none;
@@ -301,7 +298,7 @@ main{
       margin: 1em 0;
     }
     .guide-point-1{
-      background-color: $sub_color4;
+      background-color: $main_color;
       .guide-point-text1{
         margin: auto;
         h4, p{
