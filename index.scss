@@ -128,14 +128,14 @@ header{
       -webkit-animation-iteration-count: infinite;
       opacity: 0;
     }
-    
+
     .album .img1 {
       animation-delay:0s;
       -webkit-animation-delay:0s;
       display: block;
       margin: 0;
     }
-    
+
     .album .img2 {
       animation-delay:5s;
       -webkit-animation-delay:5s;
@@ -166,16 +166,16 @@ header{
       top: 0;
       left: 0;
     }
-    
+
     @keyframes album {
       0% {
         opacity: 0;
       }
-      
+
       12.5% {
         opacity: 1;
       }
-    
+
       37.5% {
         opacity: 1;
       }
@@ -183,16 +183,16 @@ header{
         opacity: 0;
       }
     }
-    
+
     @-webkit-keyframes album {
       0% {
         opacity: 0;
       }
-      
+
       12.5% {
         opacity: 1;
       }
-    
+
       37.5% {
         opacity: 1;
       }
@@ -215,7 +215,7 @@ header{
 }
 main{
   .content-wrapper{
-    margin: 5em;
+    margin: 5em 0;
     h2{
       margin: 2em;
     }
@@ -258,4 +258,46 @@ main{
       width: 30%;
     }
   }
+}
+
+.event{
+  img{
+    margin-top: 1em;
+  }
+  p{
+    margin-top: 1em;
+  }
+}
+
+#guide{
+  p{
+    margin-top: 1em;
+  }
+  .guide-points{
+    margin-top: 1em;
+    img{
+      width: 40%;
+      height: 100%;
+    }
+    h3{
+      margin: 1em 0;
+    }
+    .guide-point-1{
+      background-color: $sub_color4;
+      h4, p{
+        color: $sub_color1;
+      }
+    }
+    .guide-point-2{
+      background-color: $sub_color1;
+    }
+    .guide-point-3{
+      img{
+        width: calc(100%/3);
+        height: 350px;
+      }
+
+    }
+  }
+
 }

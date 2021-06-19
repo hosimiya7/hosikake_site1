@@ -216,7 +216,7 @@ header .header-img .header-text p {
 }
 
 main .content-wrapper {
-  margin: 5em;
+  margin: 5em 0;
 }
 
 main .content-wrapper h2 {
@@ -259,5 +259,47 @@ main .content-wrapper h2 {
 
 #guide-points .guide-point img {
   width: 30%;
+}
+
+.event img {
+  margin-top: 1em;
+}
+
+.event p {
+  margin-top: 1em;
+}
+
+#guide p {
+  margin-top: 1em;
+}
+
+#guide .guide-points {
+  margin-top: 1em;
+}
+
+#guide .guide-points img {
+  width: 40%;
+  height: 100%;
+}
+
+#guide .guide-points h3 {
+  margin: 1em 0;
+}
+
+#guide .guide-points .guide-point-1 {
+  background-color: #102542;
+}
+
+#guide .guide-points .guide-point-1 h4, #guide .guide-points .guide-point-1 p {
+  color: #dee5e5;
+}
+
+#guide .guide-points .guide-point-2 {
+  background-color: #dee5e5;
+}
+
+#guide .guide-points .guide-point-3 img {
+  width: calc(100%/3);
+  height: 350px;
 }
 /*# sourceMappingURL=index.css.map */
