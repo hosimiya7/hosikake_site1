@@ -1,4 +1,4 @@
 jQuery(".container").raindrops({
-    color: "#3c91e6",
+    color: "#2DC7FF",
     canvasHeight: 50
   });

@@ -250,7 +250,7 @@ main .content-wrapper h2 {
 
 #business-hours-fee .sale-text {
   padding: 1em;
-  border: 2px solid #3c91e6;
+  border: 2px solid #2DC7FF;
 }
 
 #events .event {
@@ -296,7 +296,7 @@ main .content-wrapper h2 {
 }
 
 #guide .guide-points .guide-point-1 {
-  background-color: #3c91e6;
+  background-color: #2DC7FF;
 }
 
 #guide .guide-points .guide-point-1 .guide-point-text1 {
@@ -304,11 +304,11 @@ main .content-wrapper h2 {
 }
 
 #guide .guide-points .guide-point-1 .guide-point-text1 h4, #guide .guide-points .guide-point-1 .guide-point-text1 p {
-  color: #dee5e5;
+  color: #F6F7EB;
 }
 
 #guide .guide-points .guide-point-2 {
-  background-color: #dee5e5;
+  background-color: #F6F7EB;
 }
 
 #guide .guide-points .guide-point-2 .guide-point-text2 {
@@ -321,7 +321,7 @@ main .content-wrapper h2 {
 }
 
 #guide .guide-points .guide-point-3 .guide-point-3-text {
-  background-color: #dee5e5;
+  background-color: #F6F7EB;
 }
 
 #guide .guide-points .guide-point-3 .guide-point-3-text .guide-padding {
@@ -329,6 +329,6 @@ main .content-wrapper h2 {
 }
 
 footer .footer-wrapper {
-  background-color: #3c91e6;
+  background-color: #2DC7FF;
 }
 /*# sourceMappingURL=index.css.map */
