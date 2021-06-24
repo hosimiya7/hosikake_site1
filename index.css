@@ -340,14 +340,14 @@ main .content-wrapper h2 {
 }
 
 #guide .guide-points img {
-  width: 40%;
+  width: 45%;
   height: 100%;
 }
 
 #guide .guide-points h3 {
   padding: 2em 0;
   color: #F6F7EB;
-  background-color: #0081AF;
+  background-color: #00ABE7;
 }
 
 #guide .guide-points .guide-point-1 {
@@ -397,7 +397,7 @@ footer .footer-list:first-child {
 }
 
 footer .footer-list p {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   position: relative;
   padding-left: 1em;
 }
@@ -414,6 +414,7 @@ footer .footer-list p::before {
 
 footer .footer-list li {
   position: relative;
+  padding: 0.1em;
   padding-left: 1em;
 }
 
@@ -429,6 +430,10 @@ footer .footer-list li::before {
   height: 0.3em;
   border-top: 1px solid #444;
   border-right: 1px solid #444;
+}
+
+footer .footer-list li a:hover {
+  color: #FCF7FF;
 }
 
 footer .footer-copyright {

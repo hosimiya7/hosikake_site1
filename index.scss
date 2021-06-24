@@ -332,13 +332,13 @@ main{
   .guide-points{
     margin-top: 1em;
     img{
-      width: 40%;
+      width: 45%;
       height: 100%;
     }
     h3{
       padding: 2em 0;
       color: $sub_color1;
-      background-color: $sub_color4;
+      background-color: $sub_color3;
     }
     .guide-point-1{
       background-color: $sub_color1;
@@ -385,7 +385,7 @@ footer{
       margin-left: 8em;
     }
     p{
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
       position: relative;
       padding-left: 1em;
       &::before{
@@ -400,6 +400,7 @@ footer{
     }
     li{
       position: relative;
+      padding: 0.1em;
       padding-left: 1em;
       &::before{
         display: block;
@@ -414,6 +415,11 @@ footer{
         height: 0.3em;
         border-top: 1px solid $font_color1;
         border-right: 1px solid $font_color1;
+      }
+      a{
+        &:hover{
+          color: $sub_color2;
+        }
       }
     }
   }
