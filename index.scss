@@ -9,6 +9,7 @@ $sub_color3: #00ABE7;
 $sub_color4: #0081AF;
 
 
+
 $breakpoints: (
   'sm': 'screen and (max-width: 480px)',
   'md': 'screen and (max-width: 900px)',
@@ -253,6 +254,7 @@ header{
         font-weight: bolder;
         font-size: 4em;
         padding: 1em 0 0 1em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       }
     }
   }
@@ -310,6 +312,10 @@ main{
     img{
       border-radius: 100px;
     }
+    h3{
+      font-size: 1.5em;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
   }
 }
 
@@ -358,6 +364,10 @@ main{
           overflow-wrap: break-word;
           margin: 1em auto;
         }
+        h4{
+          font-size: 1.5em;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
       }
     }
     .guide-point-2{
@@ -367,6 +377,10 @@ main{
           width: 450px;
           overflow-wrap: break-word;
           margin: 1em auto;
+        }
+        h4{
+          font-size: 1.5em;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
       }
     }
@@ -382,6 +396,10 @@ main{
           overflow-wrap: break-word;
           width: 800px;
           margin: 1em auto 0 auto;
+        }
+        h4{
+          font-size: 1.5em;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         .guide-padding{
           padding-bottom: 1em;
