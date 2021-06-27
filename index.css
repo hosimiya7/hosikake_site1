@@ -38,6 +38,106 @@
   background-size: cover;
 }
 
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.hamburger-menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #00ABE7;
+}
+
+.hamburger-menu-btn i {
+  color: #F6F7EB;
+}
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ABE7), to(#47d1d6));
+  background: linear-gradient(#00ABE7, #47d1d6);
+}
+
+.hamburger-menu__item {
+  width: 100%;
+  height: auto;
+  padding: 0.5em 1em;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hamburger-menu__item a {
+  color: #F6F7EB;
+  font-size: 1em;
+}
+
+.hamburger-menu__item a:hover {
+  color: #0081AF;
+}
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+/* アニメーション前のメニューの状態 */
+.hamburger-menu {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* アニメーション後のメニューの状態 */
+.hamburger-menu.is-active {
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+
 li {
   list-style: none;
 }
@@ -77,12 +177,41 @@ a {
           justify-content: center;
 }
 
+.flex-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 1350px) {
+  .flex-around {
+    display: block;
+  }
+}
+
+.flex-around-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 500px) {
+  .flex-around-header {
+    display: none;
+  }
+}
+
 table {
   border: 1px solid #aaa;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 6px;
   overflow: hidden;
+  font-size: 0.7em;
 }
 
 table th,
@@ -90,6 +219,14 @@ table th,
 table td {
   padding: .6em 3em;
   border-bottom: 1px solid #aaa;
+}
+
+@media screen and (max-width: 900px) {
+  table th,
+  table th,
+  table td {
+    padding: .6em 0.5em;
+  }
 }
 
 table th {
@@ -110,34 +247,33 @@ table tr:last-child td {
   border-left: none;
 }
 
-.flex-around {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.flex-start {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
 header .header-top .flex-start {
   border-bottom: 5px dotted #47d1d6;
   margin: 0 3em;
 }
 
-header .header-top img {
+header .header-top .flex-start img {
+  width: 110px;
+  height: 110px;
   margin-left: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+  header .header-top .flex-start img {
+    width: 70px;
+    height: 70px;
+    margin-left: -2em;
+  }
 }
 
 header .header-top h1 {
   margin: 1em 1em;
+}
+
+@media screen and (max-width: 500px) {
+  header .header-top h1 {
+    font-size: 1.2em;
+  }
 }
 
 header .header-top .header-lists {
@@ -258,6 +394,25 @@ header .header-img .header-text p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+@media screen and (max-width: 1350px) {
+  header .header-img .header-text p {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .header-img .header-text p {
+    font-size: 2em;
+    padding: 0.5em 0 0 0.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .header-img .header-text p {
+    display: none;
+  }
+}
+
 main .content-wrapper {
   margin: 0;
 }
@@ -294,15 +449,35 @@ main .content-wrapper h2 {
   padding: 0.89em 3em;
 }
 
+@media screen and (max-width: 500px) {
+  #business-hours-fee .fee table th,
+  #business-hours-fee .fee table th,
+  #business-hours-fee .fee table td {
+    padding: 0.5em 2em;
+  }
+}
+
 #business-hours-fee .sale-text {
   padding: 1em;
   margin: 1em 7em 2em 7em;
   border: 5px dotted #47d1d6;
 }
 
+@media screen and (max-width: 500px) {
+  #business-hours-fee .sale-text {
+    margin: 3em 4em 4em 4em;
+  }
+}
+
 #business-hours-fee .sale-text .sale-text-title {
   letter-spacing: 5px;
   padding: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+  #business-hours-fee .sale-text .sale-text-title {
+    letter-spacing: 4px;
+  }
 }
 
 #business-hours-fee .sale-text span {

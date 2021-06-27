@@ -8,3 +8,13 @@ jQuery(".container").raindrops({
   $('.ripples').ripples({
     resolution: 400,
   });
+
+  // ハンバーガーメニュー
+  $(function(){
+    $('.hamburger-menu-btn').on('click', function(){
+      $('.hamburger-menu').toggleClass('is-active');
+    });
+    $('.humburger-menu-item-btn').on('click', function(){
+      $('.hamburger-menu').toggleClass('is-active');
+    });
+  }());

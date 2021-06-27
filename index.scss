@@ -11,7 +11,7 @@ $sub_color4: #0081AF;
 
 
 $breakpoints: (
-  'sm': 'screen and (max-width: 480px)',
+  'sm': 'screen and (max-width: 500px)',
   'md': 'screen and (max-width: 900px)',
   'lg': 'screen and (max-width: 1350px)',
   'xl': 'screen and (min-width: 1350px)',
@@ -69,6 +69,81 @@ $breakpoints: (
   background-size: cover;
 }
 
+// ハンバーガーメニュー
+
+.hamburger{
+  display: none;
+  @include mq(sm){
+    display: block;
+  }
+}
+
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.hamburger-menu-btn{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $sub_color3;
+  i{
+    color: $sub_color1;
+  }
+}
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.hamburger-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient($sub-color3, $main-color);
+  // background: $sub_color3;
+}
+.hamburger-menu__item{
+  width: 100%;
+  height: auto;
+  padding: 0.5em 1em;
+  text-align: center;
+  box-sizing: border-box;
+  a{
+    color: $sub_color1;
+    font-size: 1em;
+    &:hover{
+      color: $sub_color4;
+    }
+  }
+}
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.hamburger-menu{
+  transform-origin: top left;
+  transform: rotateZ(-90deg);
+  transition: all .3s ease;
+}
+/* アニメーション後のメニューの状態 */
+.hamburger-menu.is-active{
+  transform: rotateZ(0deg);
+}
+
 
 li{
     list-style: none;
@@ -78,8 +153,8 @@ li{
   }
 
 .flex-start{
-    display: flex;
-    justify-content: start;
+  display: flex;
+  justify-content: start;
 }
 .flex-start-reverse{
   display: flex;
@@ -90,6 +165,20 @@ li{
   display: flex;
   justify-content: center;
 }
+.flex-around{
+  display: flex;
+  justify-content: space-around;
+  @include mq(lg){
+    display: block;
+  }
+}
+.flex-around-header{
+  display: flex;
+  justify-content: space-around;
+  @include mq(sm){
+    display: none;
+  }
+}
 
 table {
   border: 1px solid #aaa;
@@ -97,7 +186,7 @@ table {
   border-spacing: 0;
   border-radius: 6px;
   overflow: hidden;
-  // border-collapse:  collapse;   /* セルの線を重ねる */
+  font-size: 0.7em;
 }
 
 table th,
@@ -105,10 +194,10 @@ table th,
 table td {
   padding: .6em 3em;
   border-bottom: 1px solid #aaa;
+  @include mq(md){
+    padding: .6em 0.5em;
+  }
 }
-// table th {
-//   background-color: #ddd;
-// }
 table th {
   background-color: $sub_color1;
 }
@@ -124,27 +213,27 @@ table tr:last-child td {
   border-left: none;
 }
 
-.flex-around{
-    display: flex;
-    justify-content: space-around;
-}
-.flex-start{
-    display: flex;
-    justify-content: start;
-}
-
-
 header{
   .header-top{
     .flex-start{
       border-bottom: 5px dotted $main_color;
       margin: 0 3em;
-    }
-    img{
-      margin-left: 0.5em;
+      img{
+        width: 110px;
+        height: 110px;
+        margin-left: 0.5em;
+        @include mq(sm){
+          width: 70px;
+          height: 70px;
+          margin-left: -2em;
+        }
+      }
     }
     h1{
       margin: 1em 1em;
+      @include mq(sm){
+        font-size: 1.2em;
+      }
     }
     .header-lists{
       margin: 1em;
@@ -255,6 +344,16 @@ header{
         font-size: 4em;
         padding: 1em 0 0 1em;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        @include mq(lg){
+          font-size: 3.5em;
+        }
+        @include mq(md){
+          font-size: 2em;
+          padding: 0.5em 0 0 0.5em;
+        }
+        @include mq(sm){
+          display: none;
+        }
       }
     }
   }
@@ -287,20 +386,32 @@ main{
     table th,
     table td {
       padding: 0.89em 3em;
-}
-  }
+        @include mq(sm){
+          padding: 0.5em 2em;
+        }
+      }
+    }
   .sale-text{
     padding: 1em;
     margin: 1em 7em 2em 7em;
     border: 5px dotted $main_color;
+    @include mq(sm){
+      margin: 3em 4em 4em 4em;
+    }
     .sale-text-title{
       letter-spacing: 5px;
       padding: 0.5em;
+      @include mq(sm){
+        letter-spacing: 4px;
+      }
     }
     span{
       font-weight: bold;
       border-bottom: 2px double $font_color1;
       margin: 0 1em;
+      @include mq(sm){
+
+      }
     }
   }
 }
