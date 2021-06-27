@@ -186,15 +186,20 @@ table {
   border-spacing: 0;
   border-radius: 6px;
   overflow: hidden;
-  font-size: 0.7em;
+  font-size: 1em;
+  @include mq(md){
+    font-size: 0.7em;
+  }
 }
 
-table th,
 table th,
 table td {
   padding: .6em 3em;
   border-bottom: 1px solid #aaa;
   @include mq(md){
+    padding: 0.6em 3em;
+  }
+  @include mq(sm){
     padding: .6em 0.5em;
   }
 }
@@ -383,20 +388,22 @@ main{
       margin: 1em auto;
     }
     table th,
-    table th,
     table td {
       padding: 0.89em 3em;
-        @include mq(sm){
-          padding: 0.5em 2em;
-        }
+      @include mq(lg){
+        padding: 1em 4.5em;
+      }
+      @include mq(sm){
+        padding: 0.5em 2em;
       }
     }
+  }
   .sale-text{
     padding: 1em;
     margin: 1em 7em 2em 7em;
     border: 5px dotted $main_color;
     @include mq(sm){
-      margin: 3em 4em 4em 4em;
+      margin: 3em 3em 4em 3em;
     }
     .sale-text-title{
       letter-spacing: 5px;
@@ -406,12 +413,12 @@ main{
       }
     }
     span{
+      display: inline-block;
+    }
+    .border-bottom{
       font-weight: bold;
       border-bottom: 2px double $font_color1;
       margin: 0 1em;
-      @include mq(sm){
-
-      }
     }
   }
 }
@@ -430,14 +437,6 @@ main{
   }
 }
 
-#guide-points{
-  .guide-point{
-    width: calc(100%);
-    img{
-      width: 30%;
-    }
-  }
-}
 
 .event{
   img{
@@ -454,6 +453,15 @@ main{
 #guide{
   p{
     margin-top: 1em;
+  }
+  .guide-map{
+    margin: 1em;
+    img{
+      width: 70%;
+      @include mq(sm){
+        width: 90%;
+      }
+    }
   }
   .guide-points{
     margin-top: 1em;

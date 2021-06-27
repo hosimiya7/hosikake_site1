@@ -211,10 +211,15 @@ table {
   border-spacing: 0;
   border-radius: 6px;
   overflow: hidden;
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
-table th,
+@media screen and (max-width: 900px) {
+  table {
+    font-size: 0.7em;
+  }
+}
+
 table th,
 table td {
   padding: .6em 3em;
@@ -223,6 +228,12 @@ table td {
 
 @media screen and (max-width: 900px) {
   table th,
+  table td {
+    padding: 0.6em 3em;
+  }
+}
+
+@media screen and (max-width: 500px) {
   table th,
   table td {
     padding: .6em 0.5em;
@@ -444,13 +455,18 @@ main .content-wrapper h2 {
 }
 
 #business-hours-fee .fee table th,
-#business-hours-fee .fee table th,
 #business-hours-fee .fee table td {
   padding: 0.89em 3em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1350px) {
   #business-hours-fee .fee table th,
+  #business-hours-fee .fee table td {
+    padding: 1em 4.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
   #business-hours-fee .fee table th,
   #business-hours-fee .fee table td {
     padding: 0.5em 2em;
@@ -465,7 +481,7 @@ main .content-wrapper h2 {
 
 @media screen and (max-width: 500px) {
   #business-hours-fee .sale-text {
-    margin: 3em 4em 4em 4em;
+    margin: 3em 3em 4em 3em;
   }
 }
 
@@ -481,6 +497,10 @@ main .content-wrapper h2 {
 }
 
 #business-hours-fee .sale-text span {
+  display: inline-block;
+}
+
+#business-hours-fee .sale-text .border-bottom {
   font-weight: bold;
   border-bottom: 2px double #444;
   margin: 0 1em;
@@ -500,14 +520,6 @@ main .content-wrapper h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#guide-points .guide-point {
-  width: calc(100%);
-}
-
-#guide-points .guide-point img {
-  width: 30%;
-}
-
 .event img {
   margin-top: 1em;
 }
@@ -521,6 +533,20 @@ main .content-wrapper h2 {
 
 #guide p {
   margin-top: 1em;
+}
+
+#guide .guide-map {
+  margin: 1em;
+}
+
+#guide .guide-map img {
+  width: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  #guide .guide-map img {
+    width: 90%;
+  }
 }
 
 #guide .guide-points {
