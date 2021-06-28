@@ -150,6 +150,10 @@ li{
   a{
     text-decoration: none;
   }
+  .flex-start-header{
+    display: flex;
+    justify-content: start;
+  }
 
 .flex-start{
   display: flex;
