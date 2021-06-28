@@ -1170,13 +1170,6 @@ main .content-wrapper h2 {
   }
 }
 
-@media screen and (max-width: 1350px) {
-  #access .flex-center-access iframe {
-    width: 100%;
-    height: 400px;
-  }
-}
-
 footer .footer-wrapper {
   background-color: #47d1d6;
 }

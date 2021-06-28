@@ -893,10 +893,6 @@ main{
         width: 50%;
         height: 400px;
       }
-      @include mq(lg){
-        width: 100%;
-        height: 400px;
-      }
     }
   }
 }
