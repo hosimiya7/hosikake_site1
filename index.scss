@@ -24,7 +24,6 @@ $breakpoints: (
     }
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -85,7 +84,7 @@ $breakpoints: (
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 2;
+  z-index: 3;
   width: 40px;
   height: 40px;
   display: flex;
@@ -104,7 +103,7 @@ $breakpoints: (
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -155,15 +154,158 @@ li{
 .flex-start{
   display: flex;
   justify-content: start;
+  @include mq(md){
+    display: block;
+  }
 }
 .flex-start-reverse{
   display: flex;
   justify-content: start;
   flex-direction: row-reverse;
+  @include mq(md){
+    display: block;
+  }
+}
+
+
+/*====================================================================
+アコーディオンメニュー
+====================================================================*/
+.s_07 .accordion_one {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: none;
+  @include mq(md){
+    display: block;
+  }
+}
+.s_07 .accordion_one .accordion_header {
+  background-color: $main_color;
+  border-bottom: 1px solid $font_color1;
+  color: $font_color1;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 20px 11%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  @include mq(sm){
+
+  }
+}
+.s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
+  background-color: $main-color;
+  &:hover{
+    background-color: $sub_color2;
+  }
+}
+.s_07 .accordion_one:nth-of-type(2) .accordion_header {
+  background-color: $main-color;
+}
+.s_07 .accordion_one:nth-of-type(2) .accordion_inner .accordion_header {
+  background-color: $main_color;
+  &:hover{
+    background-color: $sub_color2;
+  }
+}
+.s_07 .accordion_one:nth-of-type(3) .accordion_header {
+  background-color: $main-color;
+}
+.s_07 .accordion_one:nth-of-type(3) .accordion_inner .accordion_header {
+  background-color: $main_color;
+  &:hover{
+    background-color: $sub_color2;
+  }
+}
+.s_07 .accordion_one .accordion_header:hover {
+  opacity: .8;
+}
+.s_07 .accordion_one .accordion_header .i_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $font_color1;
+  margin-top: -20px;
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: center center;
+  transition-duration: 0.2s;
+}
+.s_07 .accordion_one .accordion_header .i_box .one_i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: center center;
+  transition-duration: 0.2s;
+  position: relative;
+}
+.s_07 .accordion_one .accordion_header.open .i_box {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+.s_07 .accordion_one .accordion_header .i_box .one_i:before, .s_07 .accordion_one .accordion_header .i_box .one_i:after {
+  display: flex;
+  content: '';
+  background-color: $font_color1;
+  border-radius: 10px;
+  width: 18px;
+  height: 4px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center center;
+}
+.s_07 .accordion_one .accordion_header .i_box .one_i:before {
+  width: 4px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+.s_07 .accordion_one .accordion_header.open .i_box .one_i:before {
+  content: none;
+}
+.s_07 .accordion_one .accordion_header.open .i_box .one_i:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.s_07 .accordion_one .accordion_inner {
+  display: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+.s_07 .accordion_one .accordion_inner .box_one {
+  height: 300px;
+}
+.s_07 .accordion_one .accordion_inner p.txt_a_ac {
+  margin: 0;
+}
+
+.flex-start-footer{
+  display: flex;
+  justify-content: start;
 }
 .flex-center{
   display: flex;
   justify-content: center;
+}
+.flex-center-access{
+  display: flex;
+  justify-content: center;
+  @include mq(md){
+    display: block;
+  }
 }
 .flex-around{
   display: flex;
@@ -179,8 +321,22 @@ li{
     display: none;
   }
 }
+.flex-around-event{
+  display: flex;
+  justify-content: space-around;
+  @include mq(lg){
+    display: block;
+  }
+}
+svg{
+  display: block;
+  overflow: visible;
+  @include mq(xl){
+    display: none;
+  }
+}
 
-table {
+table{
   border: 1px solid #aaa;
   border-collapse: separate;
   border-spacing: 0;
@@ -366,6 +522,7 @@ header{
 main{
   .content-wrapper{
     margin: 0;
+    background-color: $sub_color2;
     h2{
       color: $font_color2;
     }
@@ -427,30 +584,48 @@ main{
   .event{
     width: calc(50% - 4em);
     margin: 2em;
+    @include mq(lg){
+      width: 80%;
+      margin: 0 auto;
+    }
     img{
       border-radius: 100px;
+      margin-top: 1em;
+      height: 60vh;
+      @include mq(md){
+        height: 40vh;
+      }
+      @include mq(sm){
+        border-radius: 50px;
+        margin-top: 2em;
+        height: 90%;
+      }
     }
     h3{
       font-size: 1.5em;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      @include mq(lg){
+        margin-top: 2em;
+      }
+    }
+    p{
+      margin-top: 1em;
+      width: 500px;
+      overflow-wrap: break-word;
+      margin: 1em auto;
+      @include mq(md){
+        width: 400px;
+      }
+      @include mq(sm){
+        width: 80%;
+        margin: 1em auto 2em auto;
+      }
     }
   }
 }
 
-
-.event{
-  img{
-    margin-top: 1em;
-  }
-  p{
-    margin-top: 1em;
-    width: 500px;
-    overflow-wrap: break-word;
-    margin: 1em auto;
-  }
-}
-
 #guide{
+  background-color: $sub_color2;
   p{
     margin-top: 1em;
   }
@@ -465,9 +640,15 @@ main{
   }
   .guide-points{
     margin-top: 1em;
+    @include mq(lg){
+      display: none;
+    }
     img{
       width: 45%;
       height: 100%;
+      @include mq(md){
+        margin-top: 2em;
+      }
     }
     h3{
       padding: 2em 0;
@@ -482,6 +663,9 @@ main{
           width: 450px;
           overflow-wrap: break-word;
           margin: 1em auto;
+          @include mq(md){
+            margin-bottom: 2em;
+          }
         }
         h4{
           font-size: 1.5em;
@@ -496,6 +680,9 @@ main{
           width: 450px;
           overflow-wrap: break-word;
           margin: 1em auto;
+          @include mq(md){
+            margin-bottom: 2em;
+          }
         }
         h4{
           font-size: 1.5em;
@@ -526,30 +713,189 @@ main{
       }
     }
   }
+  // スライダー
+  .slider-container {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: $sub_color2;
+    @include mq(xl){
+      display: none;
+    }
+    @include mq(lg){
+      display: block;
+    }
+    @include mq(sm){
+      padding: 2em;
+    }
+  }
+
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 20px 5px;
+    color: $font_color1;
+    font-size: 2rem;
+  }
+
+  button span {
+    position: relative;
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .previous:hover span {
+    transform: translateX(-10px) scale(1.2);
+  }
+
+  .next:hover span {
+    transform: translateX(10px) scale(1.2);
+  }
+
+  .slider-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider-nav li {
+    display: flex;
+    flex: 2;
+    text-align: center;
+    padding-left: 5%;
+  }
+
+
+  .slider-item{
+      display: none;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        width: 500px;
+        height: 300px;
+        box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
+        border-radius: 50px;
+        @include mq(md){
+          width: 100%;
+          height: 300px;
+        }
+        @include mq(sm){
+          width: 90%;
+          height: 200px;
+        }
+      }
+      h4{
+          font-size: 1.5rem;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      p{
+          width: 450px;
+          overflow-wrap: break-word;
+          margin: 1em auto;
+          @include mq(md){
+            width: 90%;
+          }
+      }
+  }
+
+  .slider-item.active {
+    display: block;
+    animation: fadeImg 0.8s;
+  }
+
+  .slider-nav .arrow {
+    flex: 0 0 15%;
+  }
+
+  .slider-nav a {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-nav span {
+    display: block;
+    width: 100%;
+  }
+  .slider-nav{
+      .previous span{
+          content: url('https://api.iconify.design/ion-arrow-left-c.svg?height=16');
+          vertical-align: -0.125em;
+      }
+      .next span{
+          content: url('https://api.iconify.design/ion-arrow-right-c.svg?height=16');
+          vertical-align: -0.125em;
+      }
+  }
+
+  @keyframes fadeImg {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  // スライダー終わり
 }
 #access{
   margin: 0 0 -1 0;
 
-  .flex-center{
+  .flex-center-access{
     .address{
       margin: auto auto;
       p{
         text-align: left;
         padding: 0.5em 0;
         border-bottom: 1px solid #ddd;
+        @include mq(lg){
+          font-size: 0.9em;
+        }
+        @include mq(md){
+          text-align: center;
+          margin: 1em 5em;
+        }
+        span{
+          display: inline-block;
+        }
       }
       .adderss-p-last{
         padding-top: 2em;
+        @include mq(md){
+          border: none;
+          padding: 2em 0.5em;
+          margin: 1em 0;
+        }
       }
       a{
         margin: 0;
         padding: 1.5em 0 0.5em 1em;
         border-bottom: 1px solid #ddd;
+        @include mq(md){
+          padding: 2em 0 0 0;
+        }
       }
     }
     iframe{
       width: 700px;
       height: 400px;
+      @include mq(lg){
+        width: 50%;
+        height: 400px;
+      }
+      @include mq(lg){
+        width: 100%;
+        height: 400px;
+      }
     }
   }
 }
@@ -561,6 +907,9 @@ footer{
   .footer-list{
     margin: 0 1em;
     font-size: 0.8em;
+    @include mq(md){
+      display: none;
+    }
     &:first-child{
       margin-left: 8em;
     }
@@ -603,9 +952,13 @@ footer{
       }
     }
   }
+
   .footer-copyright{
     border-top: 3px dotted $sub_color4;
     padding: 0.5em 0;
     margin: 2em 5em 0 5em;
+    @include mq(md){
+      border: none;
+    }
   }
 }
