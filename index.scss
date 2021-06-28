@@ -771,7 +771,10 @@ main{
     display: flex;
     flex: 2;
     text-align: center;
-    padding-left: 5%;
+    padding-left: 6%;
+    @include mq(md){
+      padding-left: 5%;
+    }
   }
 
 

@@ -999,7 +999,13 @@ main .content-wrapper h2 {
       -ms-flex: 2;
           flex: 2;
   text-align: center;
-  padding-left: 5%;
+  padding-left: 6%;
+}
+
+@media screen and (max-width: 900px) {
+  #guide .slider-nav li {
+    padding-left: 5%;
+  }
 }
 
 #guide .slider-item {
