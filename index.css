@@ -138,57 +138,6 @@
           transform: rotateZ(0deg);
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.flex-start-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.flex-start {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-@media screen and (max-width: 900px) {
-  .flex-start {
-    display: block;
-  }
-}
-
-.flex-start-reverse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-@media screen and (max-width: 900px) {
-  .flex-start-reverse {
-    display: block;
-  }
-}
-
 /*====================================================================
 アコーディオンメニュー
 ====================================================================*/
@@ -349,6 +298,57 @@ a {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-start-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.flex-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-start {
+    display: block;
+  }
+}
+
+.flex-start-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-start-reverse {
+    display: block;
+  }
+}
+
 .flex-start-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,19 +488,19 @@ table tr:last-child td {
   border-left: none;
 }
 
-header .header-top .flex-start {
+header .header-top .flex-start-header {
   border-bottom: 5px dotted #47d1d6;
   margin: 0 3em;
 }
 
-header .header-top .flex-start img {
+header .header-top .flex-start-header img {
   width: 110px;
   height: 110px;
   margin-left: 0.5em;
 }
 
 @media screen and (max-width: 500px) {
-  header .header-top .flex-start img {
+  header .header-top .flex-start-header img {
     width: 70px;
     height: 70px;
     margin-left: -2em;

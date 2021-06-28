@@ -143,35 +143,6 @@ $breakpoints: (
   transform: rotateZ(0deg);
 }
 
-
-li{
-    list-style: none;
-  }
-  a{
-    text-decoration: none;
-  }
-  .flex-start-header{
-    display: flex;
-    justify-content: start;
-  }
-
-.flex-start{
-  display: flex;
-  justify-content: start;
-  @include mq(md){
-    display: block;
-  }
-}
-.flex-start-reverse{
-  display: flex;
-  justify-content: start;
-  flex-direction: row-reverse;
-  @include mq(md){
-    display: block;
-  }
-}
-
-
 /*====================================================================
 アコーディオンメニュー
 ====================================================================*/
@@ -295,6 +266,32 @@ li{
 .s_07 .accordion_one .accordion_inner p.txt_a_ac {
   margin: 0;
 }
+li{
+  list-style: none;
+}
+a{
+text-decoration: none;
+}
+.flex-start-header{
+display: flex;
+justify-content: start;
+}
+
+.flex-start{
+display: flex;
+justify-content: start;
+@include mq(md){
+  display: block;
+}
+}
+.flex-start-reverse{
+display: flex;
+justify-content: start;
+flex-direction: row-reverse;
+@include mq(md){
+  display: block;
+}
+}
 
 .flex-start-footer{
   display: flex;
@@ -380,7 +377,7 @@ table tr:last-child td {
 
 header{
   .header-top{
-    .flex-start{
+    .flex-start-header{
       border-bottom: 5px dotted $main_color;
       margin: 0 3em;
       img{
