@@ -890,7 +890,11 @@ main{
       width: 700px;
       height: 400px;
       @include mq(lg){
-        width: 50%;
+        width: 500px;
+        height: 400px;
+      }
+      @include mq(md){
+        width: 100%;
         height: 400px;
       }
     }
