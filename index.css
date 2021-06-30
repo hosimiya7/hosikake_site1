@@ -442,6 +442,7 @@ table {
   border-radius: 6px;
   overflow: hidden;
   font-size: 1em;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 900px) {
@@ -471,7 +472,7 @@ table td {
 }
 
 table th {
-  background-color: #F6F7EB;
+  background-color: #47d1d6;
 }
 
 table th + th,
@@ -665,7 +666,7 @@ main .content-wrapper h2 {
 
 #business-hours-fee {
   margin: 2em 0 0 0;
-  padding-top: 2em;
+  padding: 2em 0;
   border-top: 5px dotted #47d1d6;
 }
 
@@ -706,8 +707,9 @@ main .content-wrapper h2 {
 
 #business-hours-fee .sale-text {
   padding: 1em;
-  margin: 1em 7em 2em 7em;
+  margin: 1em 7em 0 7em;
   border: 5px dotted #47d1d6;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 500px) {

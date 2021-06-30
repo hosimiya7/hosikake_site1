@@ -344,6 +344,7 @@ table{
   border-radius: 6px;
   overflow: hidden;
   font-size: 1em;
+  background-color: $font_color2;
   @include mq(md){
     font-size: 0.7em;
   }
@@ -361,7 +362,7 @@ table td {
   }
 }
 table th {
-  background-color: $sub_color1;
+  background-color: $main_color;
 }
 table th + th,
 table td {
@@ -532,7 +533,7 @@ main{
 
 #business-hours-fee{
   margin: 2em 0 0 0;
-  padding-top: 2em;
+  padding: 2em 0;
   border-top: 5px dotted $main_color;
   .hours{
     margin: 2em 0 2em 0;
@@ -558,8 +559,9 @@ main{
   }
   .sale-text{
     padding: 1em;
-    margin: 1em 7em 2em 7em;
+    margin: 1em 7em 0 7em;
     border: 5px dotted $main_color;
+    background-color: $font_color2;
     @include mq(sm){
       margin: 3em 3em 4em 3em;
     }
