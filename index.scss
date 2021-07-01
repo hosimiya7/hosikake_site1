@@ -293,9 +293,9 @@ flex-direction: row-reverse;
 }
 }
 
-.flex-start-footer{
+.flex-center-footer{
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 .flex-center{
   display: flex;
@@ -325,7 +325,7 @@ flex-direction: row-reverse;
 .flex-around-event{
   display: flex;
   justify-content: space-around;
-  @include mq(lg){
+  @include mq(md){
     display: block;
   }
 }
@@ -375,11 +375,13 @@ table tr:last-child td {
 .border-none{
   border-left: none;
 }
+.font-weight-bold{
+  font-weight: bold;
+}
 
 header{
   .header-top{
     .flex-start-header{
-      border-bottom: 5px dotted $main_color;
       margin: 0 3em;
       img{
         width: 110px;
@@ -399,12 +401,13 @@ header{
       }
     }
     .header-lists{
-      margin: 1em;
+      margin: 0.5em 0 1em 0;
       li{
         margin: 1em 0;
         a{
+          padding: 1em;
           &:hover{
-            color: $main-color;
+            color: $sub_color3;
           }
         }
       }
@@ -505,21 +508,22 @@ header{
     .header-text{
       position: absolute;
       top: 1rem;
-      left: 1rem;
+      left: 0;
       p{
         color: $font_color2;
         font-weight: bolder;
         font-size: 4em;
         padding: 1em 0 0 1em;
+        text-align: left;
         @include mq(lg){
           font-size: 3.5em;
         }
         @include mq(md){
-          font-size: 2em;
+          font-size: 2.5em;
           padding: 0.5em 0 0 0.5em;
         }
         @include mq(sm){
-          display: none;
+          font-size: 2em;
         }
       }
     }
@@ -536,8 +540,6 @@ main{
 
 #business-hours-fee{
   margin: 2em 0 0 0;
-  padding: 2em 0;
-  border-top: 5px dotted $main_color;
   .hours{
     margin: 2em 0 2em 0;
     .hour-table{
@@ -553,16 +555,16 @@ main{
     table td {
       padding: 0.89em 3em;
       @include mq(lg){
-        padding: 1em 4.5em;
+        padding: 1em 4.6em;
       }
       @include mq(sm){
-        padding: 0.5em 2em;
+        padding: 0.5em 2.2em;
       }
     }
   }
   .sale-text{
     padding: 1em;
-    margin: 1em 7em 0 7em;
+    margin: 2em 7em 2em 7em;
     border: 5px dotted $main_color;
     background-color: $font_color2;
     @include mq(sm){
@@ -598,8 +600,13 @@ main{
       border-radius: 100px;
       margin-top: 1em;
       height: 60vh;
-      @include mq(md){
+      @include mq(lg){
+        width: 40vw;
         height: 40vh;
+      }
+      @include mq(md){
+        width: 70vw;
+        height: 50vh;
       }
       @include mq(sm){
         border-radius: 50px;
@@ -609,8 +616,7 @@ main{
     }
     h3{
       font-size: 1.5em;
-      font-family: 'M PLUS Rounded 1c', sans-serif;
-      font-family: 'Yusei Magic', sans-serif;
+      font-weight: bold;
       @include mq(lg){
         margin-top: 2em;
       }
@@ -620,6 +626,9 @@ main{
       width: 500px;
       overflow-wrap: break-word;
       margin: 1em auto;
+      @include mq(lg){
+        width: 450px;
+      }
       @include mq(md){
         width: 400px;
       }
@@ -627,6 +636,11 @@ main{
         width: 80%;
         margin: 1em auto 2em auto;
       }
+    }
+    .event-time{
+      padding: 1em;
+      border: 1px solid $main_color;
+      border-radius: 10px;
     }
   }
 }
@@ -678,8 +692,7 @@ main{
         }
         h4{
           font-size: 1.5em;
-          font-family: 'M PLUS Rounded 1c', sans-serif;
-          font-family: 'Yusei Magic', sans-serif;
+          font-weight: bold;
         }
       }
     }
@@ -696,8 +709,7 @@ main{
         }
         h4{
           font-size: 1.5em;
-          font-family: 'M PLUS Rounded 1c', sans-serif;
-          font-family: 'Yusei Magic', sans-serif;
+          font-weight: bold;
         }
       }
     }
@@ -716,8 +728,7 @@ main{
         }
         h4{
           font-size: 1.5em;
-          font-family: 'M PLUS Rounded 1c', sans-serif;
-          font-family: 'Yusei Magic', sans-serif;
+          font-weight: bold;
         }
         .guide-padding{
           padding-bottom: 1em;
@@ -793,8 +804,8 @@ main{
       margin: 0 auto;
       text-align: center;
       img {
-        width: 500px;
-        height: 300px;
+        width: 600px;
+        height: 400px;
         box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
         border-radius: 50px;
         @include mq(md){
@@ -808,11 +819,10 @@ main{
       }
       h4{
           font-size: 1.5rem;
-          font-family: 'M PLUS Rounded 1c', sans-serif;
-          font-family: 'Yusei Magic', sans-serif;
+          font-weight: bold;
       }
       p{
-          width: 450px;
+          width: 500px;
           overflow-wrap: break-word;
           margin: 1em auto;
           @include mq(md){
@@ -884,7 +894,8 @@ main{
         }
       }
       .adderss-p-last{
-        padding-top: 2em;
+        display: inline;
+        border-bottom: none;
         @include mq(md){
           border: none;
           padding: 2em 0.5em;
@@ -892,12 +903,11 @@ main{
         }
       }
       a{
-        margin: 0;
-        padding: 1.5em 0 0.5em 1em;
-        border-bottom: 1px solid #ddd;
-        @include mq(md){
-          padding: 2em 0 0 0;
-        }
+        display: inline-block;
+        margin: 2em 0;
+        padding: 1em;
+        background-color: $main_color;
+        border-radius: 10px;
       }
     }
     iframe{
@@ -924,9 +934,6 @@ footer{
     font-size: 0.8em;
     @include mq(md){
       display: none;
-    }
-    &:first-child{
-      margin-left: 8em;
     }
     p{
       margin-bottom: 1em;

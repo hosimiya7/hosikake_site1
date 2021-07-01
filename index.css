@@ -349,13 +349,13 @@ a {
   }
 }
 
-.flex-start-footer {
+.flex-center-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-center {
@@ -418,7 +418,7 @@ a {
       justify-content: space-around;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 900px) {
   .flex-around-event {
     display: block;
   }
@@ -489,8 +489,11 @@ table tr:last-child td {
   border-left: none;
 }
 
+.font-weight-bold {
+  font-weight: bold;
+}
+
 header .header-top .flex-start-header {
-  border-bottom: 5px dotted #47d1d6;
   margin: 0 3em;
 }
 
@@ -519,15 +522,19 @@ header .header-top h1 {
 }
 
 header .header-top .header-lists {
-  margin: 1em;
+  margin: 0.5em 0 1em 0;
 }
 
 header .header-top .header-lists li {
   margin: 1em 0;
 }
 
+header .header-top .header-lists li a {
+  padding: 1em;
+}
+
 header .header-top .header-lists li a:hover {
-  color: #47d1d6;
+  color: #00ABE7;
 }
 
 header .header-img {
@@ -629,7 +636,7 @@ header .header-img .album .img5 {
 header .header-img .header-text {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 0;
 }
 
 header .header-img .header-text p {
@@ -637,6 +644,7 @@ header .header-img .header-text p {
   font-weight: bolder;
   font-size: 4em;
   padding: 1em 0 0 1em;
+  text-align: left;
 }
 
 @media screen and (max-width: 1350px) {
@@ -647,14 +655,14 @@ header .header-img .header-text p {
 
 @media screen and (max-width: 900px) {
   header .header-img .header-text p {
-    font-size: 2em;
+    font-size: 2.5em;
     padding: 0.5em 0 0 0.5em;
   }
 }
 
 @media screen and (max-width: 500px) {
   header .header-img .header-text p {
-    display: none;
+    font-size: 2em;
   }
 }
 
@@ -668,8 +676,6 @@ main .content-wrapper h2 {
 
 #business-hours-fee {
   margin: 2em 0 0 0;
-  padding: 2em 0;
-  border-top: 5px dotted #47d1d6;
 }
 
 #business-hours-fee .hours {
@@ -696,20 +702,20 @@ main .content-wrapper h2 {
 @media screen and (max-width: 1350px) {
   #business-hours-fee .fee table th,
   #business-hours-fee .fee table td {
-    padding: 1em 4.5em;
+    padding: 1em 4.6em;
   }
 }
 
 @media screen and (max-width: 500px) {
   #business-hours-fee .fee table th,
   #business-hours-fee .fee table td {
-    padding: 0.5em 2em;
+    padding: 0.5em 2.2em;
   }
 }
 
 #business-hours-fee .sale-text {
   padding: 1em;
-  margin: 1em 7em 0 7em;
+  margin: 2em 7em 2em 7em;
   border: 5px dotted #47d1d6;
   background-color: #fff;
 }
@@ -759,9 +765,17 @@ main .content-wrapper h2 {
   height: 60vh;
 }
 
+@media screen and (max-width: 1350px) {
+  #events .event img {
+    width: 40vw;
+    height: 40vh;
+  }
+}
+
 @media screen and (max-width: 900px) {
   #events .event img {
-    height: 40vh;
+    width: 70vw;
+    height: 50vh;
   }
 }
 
@@ -775,8 +789,7 @@ main .content-wrapper h2 {
 
 #events .event h3 {
   font-size: 1.5em;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1350px) {
@@ -792,6 +805,12 @@ main .content-wrapper h2 {
   margin: 1em auto;
 }
 
+@media screen and (max-width: 1350px) {
+  #events .event p {
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   #events .event p {
     width: 400px;
@@ -803,6 +822,12 @@ main .content-wrapper h2 {
     width: 80%;
     margin: 1em auto 2em auto;
   }
+}
+
+#events .event .event-time {
+  padding: 1em;
+  border: 1px solid #47d1d6;
+  border-radius: 10px;
 }
 
 #guide p {
@@ -878,8 +903,7 @@ main .content-wrapper h2 {
 
 #guide .guide-points .guide-point-1 .guide-point-text1 h4 {
   font-size: 1.5em;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
 }
 
 #guide .guide-points .guide-point-2 .guide-point-text2 {
@@ -900,8 +924,7 @@ main .content-wrapper h2 {
 
 #guide .guide-points .guide-point-2 .guide-point-text2 h4 {
   font-size: 1.5em;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
 }
 
 #guide .guide-points .guide-point-3 img {
@@ -922,8 +945,7 @@ main .content-wrapper h2 {
 
 #guide .guide-points .guide-point-3 .guide-point-3-text h4 {
   font-size: 1.5em;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
 }
 
 #guide .guide-points .guide-point-3 .guide-point-3-text .guide-padding {
@@ -1024,8 +1046,8 @@ main .content-wrapper h2 {
 }
 
 #guide .slider-item img {
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   -webkit-box-shadow: 10px 10px 20px 0 rgba(94, 47, 59, 0.2);
           box-shadow: 10px 10px 20px 0 rgba(94, 47, 59, 0.2);
   border-radius: 50px;
@@ -1047,12 +1069,11 @@ main .content-wrapper h2 {
 
 #guide .slider-item h4 {
   font-size: 1.5rem;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-family: 'Yusei Magic', sans-serif;
+  font-weight: bold;
 }
 
 #guide .slider-item p {
-  width: 450px;
+  width: 500px;
   overflow-wrap: break-word;
   margin: 1em auto;
 }
@@ -1151,7 +1172,8 @@ main .content-wrapper h2 {
 }
 
 #access .flex-center-access .address .adderss-p-last {
-  padding-top: 2em;
+  display: inline;
+  border-bottom: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -1163,15 +1185,11 @@ main .content-wrapper h2 {
 }
 
 #access .flex-center-access .address a {
-  margin: 0;
-  padding: 1.5em 0 0.5em 1em;
-  border-bottom: 1px solid #ddd;
-}
-
-@media screen and (max-width: 900px) {
-  #access .flex-center-access .address a {
-    padding: 2em 0 0 0;
-  }
+  display: inline-block;
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #47d1d6;
+  border-radius: 10px;
 }
 
 #access .flex-center-access iframe {
@@ -1206,10 +1224,6 @@ footer .footer-list {
   footer .footer-list {
     display: none;
   }
-}
-
-footer .footer-list:first-child {
-  margin-left: 8em;
 }
 
 footer .footer-list p {

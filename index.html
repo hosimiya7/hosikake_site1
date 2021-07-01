@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=M+PLUS+Rounded+1c:wght@300&family=Yusei+Magic&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
     <title>星駆水族館</title>
 </head>
 <body>
@@ -82,7 +81,7 @@
                 </div>
                 <div class="header-text">
                     <p>
-                        海の仲間に　会いに行こう！
+                        海の仲間に<br>会いに行こう！
                     </p>
                 </div>
             </div>
@@ -106,11 +105,11 @@
                         </div>
                         <div class="tbody">
                             <tr>
-                               <td class="border-none">通常</td>
+                               <td class="border-none font-weight-bold">通常</td>
                                <td colspan="2">10：00 ～ 17:00<br>(最終16：30)(火曜日休館)</td>
                            </tr>
                            <tr>
-                               <td class="border-none">ナイトツアー</td>
+                               <td class="border-none font-weight-bold">ナイトツアー</td>
                                <td>19:30から21:00</td>
                                <td>18:30から20:00</td>
                            </tr>
@@ -126,12 +125,12 @@
                             <th>子ども</th>
                         </tr>
                          <tr>
-                            <td class="border-none">通常</td>
+                            <td class="border-none font-weight-bold">通常</td>
                             <td>2400円</td>
                             <td>1200円</td>
                         </tr>
                         <tr>
-                            <td class="border-none">ナイトツアー</td>
+                            <td class="border-none font-weight-bold">ナイトツアー</td>
                             <td>2000円</td>
                             <td>1000円</td>
                         </tr>
@@ -151,7 +150,7 @@
                 <div id="dolphin" class="event scroll-reveal">
                     <h3>イルカショー</h3>
                     <img src="img/dolphin-show.jpg" alt="イルカショー" width="90%" height="300px">
-                    <p>
+                    <p class="event-time">
                         全日　11時～、13時～、15時～<br>
                         (一階外　イルカプールにて)
                     </p>
@@ -164,7 +163,7 @@
                 <div id="sea-lion" class="event scroll-reveal">
                     <h3>アシカショー</h3>
                     <img src="img/sea-lion.jpg" alt="アシカショー" width="90%" height="300px">
-                    <p>
+                    <p class="event-time">
                         全日　13時30分～、15時30分～<br>
                         (二階外　アシカプールにて)
                     </p>
@@ -179,7 +178,7 @@
                 <div id="pengin" class="event scroll-reveal">
                     <h3>ペンギン散歩</h3>
                     <img src="img/walking.jpg" alt="ペンギン散歩" width="90%" height="300px">
-                    <p>
+                    <p class="event-time">
                         全日　12時～、14時～<br>
                         （一階外フロアにて：雨天中止）
                     </p>
@@ -191,7 +190,7 @@
                 <div id="fishing" class="event scroll-reveal">
                     <h3>お魚のごはんタイム</h3>
                     <img src="img/feeding.jpg" alt="お魚のごはんタイム" width="90%" height="300px">
-                    <p>
+                    <p class="event-time">
                         全日　12時30分～、16時～<br>
                         （巨大水槽前）
                     </p>
@@ -209,12 +208,7 @@
             </div>
             <div class="guide-maps">
                 <div class="guide-map scroll-reveal">
-                    <p>1F</p>
-                    <img src="img/infomation.png" alt="一階の館内図">
-                </div>
-                <div class="guide-map scroll-reveal">
-                    <p>2F</p>
-                    <img src="img/infomation2.png" alt="二階の館内図">
+                    <img src="img/infomation.jpg" alt="一階の館内図">
                 </div>
             </div>
             <div class="guide-points">
@@ -384,10 +378,10 @@
                     <p>住所　<span>福井県</span><span>あわら市</span><span>星駆XXX番地</span><span>XXX号</span></p>
                     <p>TEL　 XXX-XXXX-XXX</p>
                     <p>アクセス　<span>星駆駅から</span><span>徒歩7分</span>・<span>星駆ICより</span><span>車で10分</span></p>
-                    <div class="flex-center">
-                        <p class="adderss-p-last">問い合わせはこちらから →</p>
-                        <a href="https://twitter.com/hosimiyaprog"><i class="fab fa-twitter fa-2x" style="color: #00ACEE;"></i></a>
-                    </div>
+                    <a href="https://twitter.com/hosimiyaprog">
+                            <p class="adderss-p-last">問い合わせはこちらから </p>
+                            <i class="fab fa-twitter" style="color: #ffffff;"></i>
+                    </a>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d51508.43714960131!2d136.1695238!3d36.2084538!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8efd2ba2fe767%3A0xaccfd83b4273bac5!2z56aP5LqV55yM44GC44KP44KJ5biC!5e0!3m2!1sja!2sjp!4v1624593414276!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -399,87 +393,90 @@
             </div>
         </div>
         <div class="footer-wrapper">
-            <div class="flex-start-footer">
-                <div class="footer-list">
-                    <p>星駆水族館について</p>
-                    <ul>
-                        <li>
-                            <a href="#business-hours-fee">
-                                営業時間・料金
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#events">
-                                イベント情報
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#guide">
-                                館内案内
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#access">
-                                アクセス
-                            </a>
-                        </li>
-                    </ul>
+            <div class="footer-list-wrapper">
+                <div class="flex-center-footer">
+                    <div class="footer-list">
+                        <p>星駆水族館について</p>
+                        <ul>
+                            <li>
+                                <a href="#business-hours-fee">
+                                    営業時間・料金
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#events">
+                                    イベント情報
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#guide">
+                                    館内案内
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#access">
+                                    アクセス
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <p>イベント情報</p>
+                        <ul>
+                            <li>
+                                <a href="#dolphin">
+                                    イルカショー
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#sea-lion">
+                                    アシカショー
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pengin">
+                                    ペンギン散歩
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#fishing">
+                                    お魚のごはんタイム
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <p>館内案内</p>
+                        <ul>
+                            <li>
+                                <a href="#guide-dolphin">
+                                    イルカ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#guide-jewelryfish">
+                                    くらげ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#guide-big-aquarium">
+                                    巨大水槽
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#guide-pengin">
+                                    ペンギン
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#guide-fish">
+                                    熱帯魚コーナー
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-list">
-                    <p>イベント情報</p>
-                    <ul>
-                        <li>
-                            <a href="#dolphin">
-                                イルカショー
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sea-lion">
-                                アシカショー
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#pengin">
-                                ペンギン散歩
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#fishing">
-                                お魚のごはんタイム
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <p>館内案内</p>
-                    <ul>
-                        <li>
-                            <a href="#guide-dolphin">
-                                イルカ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#guide-jewelryfish">
-                                くらげ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#guide-big-aquarium">
-                                巨大水槽
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#guide-pengin">
-                                ペンギン
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#guide-fish">
-                                熱帯魚コーナー
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
 
             <div class="section s_07">
