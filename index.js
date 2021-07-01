@@ -1,6 +1,32 @@
 $(document).ready(function() {
+  // ふわっと表示
+  ScrollReveal().reveal('.scroll-reveal', {
+    duration: 1600,
+    reset: true
+  });
 
-// raindrop
+  ScrollReveal().reveal('.scroll-reveal.sale-text', {
+    duration: 1600,
+    scale: 0.1,
+    reset: true
+  });
+
+  ScrollReveal().reveal('.scroll-reveal.guide-point-text2', {
+    duration: 1600,
+    origin: 'left',
+    distance: '50px',
+    reset: true
+  });
+
+  ScrollReveal().reveal('.scroll-reveal.guide-point-text1', {
+    duration: 1600,
+    origin: 'right',
+    distance: '50px',
+    reset: true
+  });
+
+
+  // raindrop
   jQuery(".container").raindrops({
     color: "#47d1d6",
     canvasHeight: 60

@@ -8,7 +8,7 @@
           box-sizing: border-box;
   line-height: 1.7em;
   letter-spacing: 1.7px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #444;
   text-align: center;
 }
@@ -526,6 +526,10 @@ header .header-top .header-lists li {
   margin: 1em 0;
 }
 
+header .header-top .header-lists li a:hover {
+  color: #47d1d6;
+}
+
 header .header-img {
   position: relative;
   vertical-align: top;
@@ -633,7 +637,6 @@ header .header-img .header-text p {
   font-weight: bolder;
   font-size: 4em;
   padding: 1em 0 0 1em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @media screen and (max-width: 1350px) {
@@ -657,7 +660,6 @@ header .header-img .header-text p {
 
 main .content-wrapper {
   margin: 0;
-  background-color: #FCF7FF;
 }
 
 main .content-wrapper h2 {
@@ -773,7 +775,8 @@ main .content-wrapper h2 {
 
 #events .event h3 {
   font-size: 1.5em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 @media screen and (max-width: 1350px) {
@@ -800,10 +803,6 @@ main .content-wrapper h2 {
     width: 80%;
     margin: 1em auto 2em auto;
   }
-}
-
-#guide {
-  background-color: #FCF7FF;
 }
 
 #guide p {
@@ -855,6 +854,12 @@ main .content-wrapper h2 {
   background-color: #F6F7EB;
 }
 
+@media screen and (max-width: 900px) {
+  #guide .guide-points .guide-point-1 {
+    background-color: transparent;
+  }
+}
+
 #guide .guide-points .guide-point-1 .guide-point-text1 {
   margin: auto;
 }
@@ -873,7 +878,8 @@ main .content-wrapper h2 {
 
 #guide .guide-points .guide-point-1 .guide-point-text1 h4 {
   font-size: 1.5em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 #guide .guide-points .guide-point-2 .guide-point-text2 {
@@ -894,7 +900,8 @@ main .content-wrapper h2 {
 
 #guide .guide-points .guide-point-2 .guide-point-text2 h4 {
   font-size: 1.5em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 #guide .guide-points .guide-point-3 img {
@@ -915,7 +922,8 @@ main .content-wrapper h2 {
 
 #guide .guide-points .guide-point-3 .guide-point-3-text h4 {
   font-size: 1.5em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 #guide .guide-points .guide-point-3 .guide-point-3-text .guide-padding {
@@ -925,7 +933,6 @@ main .content-wrapper h2 {
 #guide .slider-container {
   margin: 0 auto;
   padding: 50px;
-  background-color: #FCF7FF;
 }
 
 @media screen and (min-width: 1350px) {
@@ -1040,7 +1047,8 @@ main .content-wrapper h2 {
 
 #guide .slider-item h4 {
   font-size: 1.5rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 #guide .slider-item p {
