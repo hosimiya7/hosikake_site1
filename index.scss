@@ -167,7 +167,6 @@ $breakpoints: (
   cursor: pointer;
   transition-duration: 0.2s;
   @include mq(sm){
-
   }
 }
 .s_07 .accordion_one:nth-of-type(1) .accordion_inner .accordion_header {
@@ -270,27 +269,27 @@ li{
   list-style: none;
 }
 a{
-text-decoration: none;
+  text-decoration: none;
 }
 .flex-start-header{
-display: flex;
-justify-content: start;
+  display: flex;
+  justify-content: start;
 }
 
 .flex-start{
-display: flex;
-justify-content: start;
-@include mq(md){
-  display: block;
-}
+  display: flex;
+  justify-content: start;
+  @include mq(md){
+    display: block;
+  }
 }
 .flex-start-reverse{
-display: flex;
-justify-content: start;
-flex-direction: row-reverse;
-@include mq(md){
-  display: block;
-}
+  display: flex;
+  justify-content: start;
+  flex-direction: row-reverse;
+  @include mq(md){
+    display: block;
+  }
 }
 
 .flex-center-footer{
@@ -539,15 +538,18 @@ main{
 }
 
 #business-hours-fee{
-  margin: 2em 0 0 0;
+  margin: 0.5em 0 0 0;
   .hours{
-    margin: 2em 0 2em 0;
+    margin: 5em 0 2em 0;
     .hour-table{
       margin: 1em auto;
     }
   }
   .fee{
-    margin: 2em 0 2em 0;
+    margin: 5em 0 2em 0;
+    @include mq(lg){
+      margin: 2em 0 2em 0;
+    }
     .fee-table{
       margin: 1em auto;
     }
@@ -564,11 +566,16 @@ main{
   }
   .sale-text{
     padding: 1em;
-    margin: 2em 7em 2em 7em;
+    margin: 3em auto 5em auto;
     border: 5px dotted $main_color;
     background-color: $font_color2;
+    width: 600px;
+    @include mq(md){
+      width: 400px;
+    }
     @include mq(sm){
-      margin: 3em 3em 4em 3em;
+
+      width: 300px;
     }
     .sale-text-title{
       letter-spacing: 5px;
@@ -580,18 +587,26 @@ main{
     span{
       display: inline-block;
     }
-    .border-bottom{
+    .background{
       font-weight: bold;
-      border-bottom: 2px double $font_color1;
+      padding: 0 0.5em;
+      background: linear-gradient(transparent 60%, $main_color 60%);
       margin: 0 1em;
     }
   }
 }
 
 #events{
+  #dolphin{
+    margin-top: 6em;
+  }
+  #sea-lion{
+    margin-top: 6em;
+  }
   .event{
     width: calc(50% - 4em);
     margin: 2em;
+    display: block;
     @include mq(lg){
       width: 80%;
       margin: 0 auto;
@@ -617,15 +632,15 @@ main{
     h3{
       font-size: 1.5em;
       font-weight: bold;
-      @include mq(lg){
-        margin-top: 2em;
-      }
     }
     p{
       margin-top: 1em;
       width: 500px;
       overflow-wrap: break-word;
       margin: 1em auto;
+      &:last-child{
+        margin-bottom: 6em;
+      }
       @include mq(lg){
         width: 450px;
       }
@@ -646,11 +661,12 @@ main{
 }
 
 #guide{
+  margin-top: 6em;
   p{
     margin-top: 1em;
   }
   .guide-map{
-    margin: 1em;
+    margin: 6em 0 2em 0;
     img{
       width: 70%;
       @include mq(sm){
@@ -738,7 +754,7 @@ main{
   }
   // スライダー
   .slider-container {
-    margin: 0 auto;
+    margin: 0 auto 3em auto;
     padding: 50px;
     @include mq(xl){
       display: none;
@@ -878,6 +894,10 @@ main{
   .flex-center-access{
     .address{
       margin: auto auto;
+      @include mq(md){
+        text-align: center;
+        margin: 4em auto;
+      }
       p{
         text-align: left;
         padding: 0.5em 0;

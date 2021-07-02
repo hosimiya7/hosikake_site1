@@ -675,11 +675,11 @@ main .content-wrapper h2 {
 }
 
 #business-hours-fee {
-  margin: 2em 0 0 0;
+  margin: 0.5em 0 0 0;
 }
 
 #business-hours-fee .hours {
-  margin: 2em 0 2em 0;
+  margin: 5em 0 2em 0;
 }
 
 #business-hours-fee .hours .hour-table {
@@ -687,7 +687,13 @@ main .content-wrapper h2 {
 }
 
 #business-hours-fee .fee {
-  margin: 2em 0 2em 0;
+  margin: 5em 0 2em 0;
+}
+
+@media screen and (max-width: 1350px) {
+  #business-hours-fee .fee {
+    margin: 2em 0 2em 0;
+  }
 }
 
 #business-hours-fee .fee .fee-table {
@@ -715,14 +721,21 @@ main .content-wrapper h2 {
 
 #business-hours-fee .sale-text {
   padding: 1em;
-  margin: 2em 7em 2em 7em;
+  margin: 3em auto 5em auto;
   border: 5px dotted #47d1d6;
   background-color: #fff;
+  width: 600px;
+}
+
+@media screen and (max-width: 900px) {
+  #business-hours-fee .sale-text {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   #business-hours-fee .sale-text {
-    margin: 3em 3em 4em 3em;
+    width: 300px;
   }
 }
 
@@ -741,15 +754,26 @@ main .content-wrapper h2 {
   display: inline-block;
 }
 
-#business-hours-fee .sale-text .border-bottom {
+#business-hours-fee .sale-text .background {
   font-weight: bold;
-  border-bottom: 2px double #444;
+  padding: 0 0.5em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #47d1d6));
+  background: linear-gradient(transparent 60%, #47d1d6 60%);
   margin: 0 1em;
+}
+
+#events #dolphin {
+  margin-top: 6em;
+}
+
+#events #sea-lion {
+  margin-top: 6em;
 }
 
 #events .event {
   width: calc(50% - 4em);
   margin: 2em;
+  display: block;
 }
 
 @media screen and (max-width: 1350px) {
@@ -792,17 +816,15 @@ main .content-wrapper h2 {
   font-weight: bold;
 }
 
-@media screen and (max-width: 1350px) {
-  #events .event h3 {
-    margin-top: 2em;
-  }
-}
-
 #events .event p {
   margin-top: 1em;
   width: 500px;
   overflow-wrap: break-word;
   margin: 1em auto;
+}
+
+#events .event p:last-child {
+  margin-bottom: 6em;
 }
 
 @media screen and (max-width: 1350px) {
@@ -830,12 +852,16 @@ main .content-wrapper h2 {
   border-radius: 10px;
 }
 
+#guide {
+  margin-top: 6em;
+}
+
 #guide p {
   margin-top: 1em;
 }
 
 #guide .guide-map {
-  margin: 1em;
+  margin: 6em 0 2em 0;
 }
 
 #guide .guide-map img {
@@ -953,7 +979,7 @@ main .content-wrapper h2 {
 }
 
 #guide .slider-container {
-  margin: 0 auto;
+  margin: 0 auto 3em auto;
   padding: 50px;
 }
 
@@ -1146,6 +1172,13 @@ main .content-wrapper h2 {
 
 #access .flex-center-access .address {
   margin: auto auto;
+}
+
+@media screen and (max-width: 900px) {
+  #access .flex-center-access .address {
+    text-align: center;
+    margin: 4em auto;
+  }
 }
 
 #access .flex-center-access .address p {
